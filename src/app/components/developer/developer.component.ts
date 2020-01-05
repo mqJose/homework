@@ -32,7 +32,7 @@ export class DeveloperComponent implements OnInit {
     const dialogRef = this.dialog.open(DeveloperModalComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      // console.log(`Dialog result: ${result}`);
     });
   }
 

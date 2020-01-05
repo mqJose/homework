@@ -12,28 +12,32 @@ export class ContentService {
       whereIsImplemented: 'Bolivia', 
       acronym: 'MOSPA', 
       image: '../../../assets/images/logos/_mospa_.png',
-      status: 'Working'
+      status: 'Working',
+      statusBool: false
     }, {
       id: 2,
       name: 'Facing together the challenge of poverty',
       whereIsImplemented: 'Libano',
       acronym: 'TAHADDI',
       image: '../../../assets/images/logos/_tahaddi_.png',
-      status: 'Working'
+      status: 'Working',
+      statusBool: false
     }, {
       id: 3,
       name: 'Sistema de Informaciones para Gestion Adolescentes de Honduras',
       whereIsImplemented: 'Honduras',
       acronym: 'SIGAH',
       image: '../../../assets/images/logos/_sigah_.png',
-      status: 'Working'
+      status: 'Working',
+      statusBool: false
     }, {
       id: 4,
-      name: 'Sistema Penitenciario de bolivia',
+      name: 'Sistema Penitenciario de Bolivia',
       whereIsImplemented: 'Bolivia',
       acronym: 'SIPENBOL',
       image: '../../../assets/images/logos/_sipenbol_.png',
-      status: 'Finished'
+      status: 'Finished',
+      statusBool: true
     }
   ];
   constructor() { }

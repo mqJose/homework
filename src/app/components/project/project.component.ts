@@ -9,17 +9,15 @@ import { ProjectData } from 'src/app/interfaces/project-data';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-  public displayedColumns: string[] = ['id', 'name', 'whereIsImplemented', 'acronym', 'image', 'status'];   
+
   public data: ProjectData [];
-  // public data: any;
+
   constructor(private _contentService: ContentService) { 
-    
     this.data = this._contentService.getProjects();
-    console.log('>>>', this.data);
-    console.log('>>>', this.displayedColumns);
   }
 
   ngOnInit() {
+    
   }
 
 }

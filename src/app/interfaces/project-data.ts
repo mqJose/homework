@@ -5,4 +5,5 @@ export interface ProjectData {
     acronym: string;
     image: string,
     status: string;
+    statusBool: boolean;
 }

@@ -6,9 +6,7 @@ import * as moment from 'moment';
 export class AgePipe implements PipeTransform {
 
   transform(inputDate: string): string {
-    console.log('>>>', inputDate);
     let years = moment().diff(inputDate, 'years');
-    console.log('... ', years);
     return '+'+years+' years old';
   }
 

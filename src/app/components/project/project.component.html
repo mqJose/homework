@@ -33,9 +33,9 @@
               <td class="end col-5"><span>Acronym Name: </span></td>
               <td class="col-7">{{ element.acronym }}</td>
             </tr>
-            <tr class="between" [appFinished]= element.status >
+            <tr class="between">  `
               <td class="end col-5"><span>Status of the Project</span></td>
-              <td class="col-7">{{ element.status }}</td>
+              <td class="col-7" appFinished=element.statusBool>{{ element.status }}</td>
             </tr>
           </tbody>
         </table>
