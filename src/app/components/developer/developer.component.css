@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.example-card {
+  max-width: 400px;
+}
+.element-center {
+    display: flex;
+    justify-content: center;
+}
+.element-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-project {
+  background-size: cover;
+  height: 100px;
+  width: 200px;
+  display: flex;
+
+}
+
+/* 
+justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content: space-around;
+justify-content: space-between;
+
+align-items: flex-start;
+align-items: flex-end;
+align-items: center;
+align-items: baseline;
+align-items: stretch;
+
+flex-direction: row;
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+*/

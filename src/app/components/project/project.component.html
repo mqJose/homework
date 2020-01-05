@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="search">
+    <form class="example-form">
+
+      <mat-form-field class="example-full-width">
+        <span matPrefix>... &nbsp;</span>
+        <input type="search" matInput placeholder=" Project's name">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+<div class="container d-block">
+  <div class="container row my-2 border border-ligth rounded" *ngFor="let element of data"  [appPaint]="'rgba(235, 189, 91, 0.3)'">
+    <div class="col-lg-4">
+      <img class="images img-fluid" [src]="element.image" [alt]="element.acronym">
+    </div>
+    <div class="col-lg-8">
+    <!-- <div class="col-lg-8" [appPaint]="'#6B59B7'"> -->
+      <h5 class="end-title" >{{ element.acronym }}</h5>
+      <div class="col-md-12">
+        <table class="table table-sm table-hover">
+          <tbody>
+            <tr class="between">
+              <td class="end col-5"><span>Project's Full Name: </span></td>
+              <td class="col-7">{{ element.name }}</td>
+            </tr>
+            <tr class="between">
+              <td class="end col-5"><span>Where is implemented: </span></td>
+              <td class="col-7">{{ element.whereIsImplemented }}</td>
+            </tr>
+            <tr class="between">
+              <td class="end col-5"><span>Acronym Name: </span></td>
+              <td class="col-7">{{ element.acronym }}</td>
+            </tr>
+            <tr class="between" [appFinished]= element.status >
+              <td class="end col-5"><span>Status of the Project</span></td>
+              <td class="col-7">{{ element.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
