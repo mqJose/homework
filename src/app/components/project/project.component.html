@@ -4,14 +4,14 @@
 
       <mat-form-field class="example-full-width">
         <span matPrefix>... &nbsp;</span>
-        <input type="search" matInput placeholder=" Project's name">
+        <input type="search" matInput placeholder="Acronym" name="filterProject" [(ngModel)]="filterProject">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
     </form>
   </div>
 </div>
 <div class="container d-block">
-  <div class="container row my-2 border border-ligth rounded" *ngFor="let element of data"  [appPaint]="'rgba(235, 189, 91, 0.3)'">
+  <div class="container row my-2 border border-ligth rounded" *ngFor="let element of data | search: filterProject"  [appPaint]="'rgba(235, 189, 91, 0.3)'">
     <div class="col-lg-4">
       <img class="images img-fluid" [src]="element.image" [alt]="element.acronym">
     </div>

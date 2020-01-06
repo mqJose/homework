@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
+import { FormsModule } from '@angular/forms';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 /* components */
@@ -23,6 +24,7 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { DeveloperModalComponent } from './components/developer/developer-modal/developer-modal.component';
 import { ProjectModalComponent } from './components/project/project-modal/project-modal.component';
 import { FinishedDirective } from './directives/finished.directive';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { FinishedDirective } from './directives/finished.directive';
     ToolbarComponent,
     DeveloperModalComponent,
     ProjectModalComponent,
-    FinishedDirective
+    FinishedDirective,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    FormsModule
   ],
   providers: [
     ContentService,

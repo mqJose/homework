@@ -52,14 +52,14 @@ export class ContentService {
   /**
    * filter
    */
-  public filter( id: number ): ProjectData[] {
+  public filterById( id: number | string ): ProjectData[] {
     return _.filter(this.ELEMENT_DATA, {id: id});
   }
   
   /**
    * filterName
    */
-  public filterName(name: string): ProjectData[] {
+  public filterByName(name: string): ProjectData[] {
     return _.filter(this.ELEMENT_DATA, { name: name });
   }
 
