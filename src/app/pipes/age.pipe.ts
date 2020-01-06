@@ -4,10 +4,13 @@ import * as moment from 'moment';
   name: 'age'
 })
 export class AgePipe implements PipeTransform {
-
+  /**
+  * Represent a filter for DataProject
+  * @param (string) argumment of Input Date
+  * @returns (string) age concated with a string
+  */
   transform(inputDate: string): string {
-    let years = moment().diff(inputDate, 'years');
-    return '+'+years+' years old';
+    return '+' + (moment().diff(inputDate, 'years'))+' years old';
   }
 
 }

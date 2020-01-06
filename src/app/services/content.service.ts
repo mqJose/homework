@@ -43,21 +43,23 @@ export class ContentService {
   constructor() { }
 
   /**
-   * getProjects
+   * Represent all getProject for DataProject 
    */
   public getProjects(): ProjectData[] {
     return this.ELEMENT_DATA;
   }
 
   /**
-   * filter
+   * Represent a filter for DataProject 
+   * @param (number | string) id - id Data
    */
   public filterById( id: number | string ): ProjectData[] {
     return _.filter(this.ELEMENT_DATA, {id: id});
   }
   
   /**
-   * filterName
+   * Represent a filterByName for DataProject  
+   * @param (string) name - name Data
    */
   public filterByName(name: string): ProjectData[] {
     return _.filter(this.ELEMENT_DATA, { name: name });

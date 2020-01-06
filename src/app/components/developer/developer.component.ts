@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { DeveloperModalComponent } from './developer-modal/developer-modal.component';
-import { MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { DeveloperData } from '../../interfaces/developer-data';
 
 @Component({
@@ -21,13 +21,23 @@ export class DeveloperComponent implements OnInit {
   }
   public data: DeveloperData;
 
-  constructor(public dialog: MatDialog) { 
+  /**
+  * Represent DeveloperComponent
+  * @constructor
+  * @param (MatDialog) argumment for effect DOM from Material
+  * @returns (void)
+  */
+  constructor(public dialog: MatDialog) {
     this.data = this.developerData;
   }
 
   ngOnInit() {
   }
-
+  
+  /**
+  * Represent a starting modal DeveloperComponent
+  * @returns (void)
+  */
   openDialog() {
     const dialogRef = this.dialog.open(DeveloperModalComponent);
 

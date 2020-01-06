@@ -6,25 +6,19 @@ import { ProjectData } from '../interfaces/project-data';
 })
 export class SearchPipe implements PipeTransform {
 
-  // transform(data: ProjectData[], arg: string, key: string): ProjectData[] {
-    
-  //   if( arg == '' || arg.length < 2) return data;
-  //   arg = arg.toLowerCase();
-
-  //   return data.filter( item => {
-  //     return item[key].toLowerCase().include(arg)
-  //   });
-  // }
-
-
+  /**
+  * Represent a filter for DataProject
+  * @param (ProjectData [])  - Data 
+  * @param (string) argumment of Input
+  * @returns (ProjectData[])
+  */
   transform(data: ProjectData[], arg: string): ProjectData[] {
     
     if( arg == '' || arg.length < 2) return data;
     let resultProject = [];
-    for (let element of data) {
-      if (element.acronym.toLowerCase().indexOf(arg.toLowerCase()) > -1){
-        // console.log('>>>', '-- pipe');
-        resultProject.push(element);
+    for (let item of data) {
+      if (item.acronym.toLowerCase().indexOf(arg.toLowerCase()) > -1){
+        resultProject.push(item);
       }
     }
     return resultProject;
